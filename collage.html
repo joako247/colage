@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Collage Romántico</title>
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: Arial, 'Segoe UI', sans-serif;
+    }
+    .collage-container {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      padding-top: 60px;
+    }
+    .foto-box {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      filter: drop-shadow(0 0 20px #00f8);
+      animation: aparecer 2s;
+    }
+    .foto-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 2px solid #fff2;
+      box-shadow: 0 4px 32px #00f8, 0 2px 8px #222;
+    }
+    /* Animación de aparición */
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-40px) scale(0.9);}
+      to   { opacity: 1; transform: translateY(0) scale(1);}
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .foto-img { width: 80px; height: 80px; }
+    }
+    /* Texto central tipo TikTok */
+    .central-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 0 0 18px #00f8, 0 2px 8px #222;
+      pointer-events: none;
+      z-index: 100;
+      animation: centralFade 4s forwards;
+    }
+    @keyframes centralFade {
+      0% { opacity: 0;}
+      15% { opacity: 1;}
+      85% { opacity: 1;}
+      100% { opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="collage-container">
+    <div class="foto-box" style="top: 20px; left: 40px;">
+      <img src="img/1.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 40px; left: 220px;">
+      <img src="img/2.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 180px; left: 120px;">
+      <img src="img/3.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 320px; left: 60px;">
+      <img src="img/4.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 220px; left: 320px;">
+      <img src="img/5.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 400px; left: 180px;">
+      <img src="img/6.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 80px; left: 400px;">
+      <img src="img/7.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 480px; left: 300px;">
+      <img src="img/8.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 340px; left: 420px;">
+      <img src="img/9.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 540px; left: 120px;">
+      <img src="img/10.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 600px; left: 320px;">
+      <img src="img/11.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 220px; left: 540px;">
+      <img src="img/12.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 420px; left: 540px;">
+      <img src="img/13.jpg" class="foto-img" />
+    </div>
+    <div class="foto-box" style="top: 80px; left: 540px;">
+      <img src="img/14.jpg" class="foto-img" />
+    </div>
+  </div>
+  <div class="central-text">Te amo ❤<br>3 meses juntos</div>
+</body>
+</html>
